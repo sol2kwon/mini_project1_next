@@ -19,7 +19,7 @@ const HomeIcon = createSvgIcon(
   'Home',
 );
 
-const basicSettings = {subTitles: ['카운터', '계산기', 'BMI', '게시판'], urls: ["/basic/counter","/basic/calc","/basic/bmi", '/board/list']};
+const basicSettings = {subTitles: ['Q&A'], urls: ['/board/boardlist']};
 
 export function Nav(){
   const [imageInfos, setImageInfos] = useState({imageUrl: 'https://as2.ftcdn.net/v2/jpg/01/85/61/65/1000_F_185616556_uCc1J5d5GNfRH6ErgP1G8x8ORLeG25en.jpg', imageTitle: 'sign'});

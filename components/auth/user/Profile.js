@@ -98,7 +98,7 @@ export function Profile({loginUser}) {
                                 </a>
                             </div>
                             <p>
-                                <button>Contact</button>
+                                <button>로그인 화면으로 가기</button>
                             </p>
                         </div>
                     </Box>

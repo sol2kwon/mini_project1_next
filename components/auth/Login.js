@@ -10,8 +10,8 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Paper from '@mui/material/Paper';
 
 function Copyright(props) {
     return (
@@ -31,11 +31,27 @@ function Copyright(props) {
   
     return (
       <ThemeProvider theme={theme}>
-        <Container component="main" maxWidth="xs">
-          <CssBaseline />
+      <Grid container component="main" sx={{ height: '100vh' }}>
+        <CssBaseline />
+        <Grid
+          item
+          xs={false}
+          sm={4}
+          md={7}
+          sx={{
+            backgroundImage: 'url(https://source.unsplash.com/random)',
+            backgroundRepeat: 'no-repeat',
+            backgroundColor: (t) =>
+              t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
+        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
           <Box
             sx={{
-              marginTop: 8,
+              my: 8,
+              mx: 4,
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
@@ -45,9 +61,9 @@ function Copyright(props) {
               <LockOutlinedIcon />
             </Avatar>
             <Typography component="h1" variant="h5">
-              로그인
+              Sign in
             </Typography>
-            <Box component="form" noValidate sx={{ mt: 1 }} onSubmit={onSubmit}>
+            <Box component="form" noValidate="noValidate" onSubmit={onSubmit} sx={{ mt: 1 }}>
               <TextField
                 margin="normal"
                 required
@@ -56,9 +72,8 @@ function Copyright(props) {
                 label="사용자ID"
                 name="userid"
                 autoComplete="userid"
+                autoFocus
                 onChange = {onChange}
-                
-               
               />
               <TextField
                 margin="normal"
@@ -70,11 +85,10 @@ function Copyright(props) {
                 id="password"
                 autoComplete="current-password"
                 onChange = {onChange}
-               
               />
               <FormControlLabel
                 control={<Checkbox value="remember" color="primary" />}
-                label="로그인정보저장"
+                label="Remember me"
               />
               <Button
                 type="submit"
@@ -82,8 +96,9 @@ function Copyright(props) {
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
               >
-                전송
+                Sign In
               </Button>
+
               <Grid container>
                 <Grid item xs>
                   <Link href="#" variant="body2">
@@ -91,16 +106,17 @@ function Copyright(props) {
                   </Link>
                 </Grid>
                 <Grid item>
-                  <Link href="#" variant="body2">
+                  <Link href="/auth/register" variant="body2">
                     {"Don't have an account? Sign Up"}
                   </Link>
                 </Grid>
               </Grid>
+              <Copyright sx={{ mt: 5 }} />
             </Box>
           </Box>
-          <Copyright sx={{ mt: 8, mb: 4 }} />
-        </Container>
-      </ThemeProvider>
+        </Grid>
+      </Grid>
+    </ThemeProvider>
     );
   }
   

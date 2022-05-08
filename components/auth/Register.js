@@ -142,13 +142,6 @@ export function Register({onChange, onSubmit}){
             >
               전 송
             </Button>
-            <Grid container justifyContent="flex-end">
-              <Grid item>
-                <Link href="/auth/login" variant="body2">
-                  로그인 화면으로 전환
-                </Link>
-              </Grid>
-            </Grid>
           </Box>
          </Box>
       </Container>

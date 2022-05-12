@@ -16,9 +16,9 @@ import Paper from '@mui/material/Paper';
 function Copyright(props) {
     return (
       <Typography variant="body2" color="text.secondary" align="center" {...props}>
-        {'Copyright © '}
+        {'Project © '}
         <Link color="inherit" href="https://mui.com/">
-          Your Website
+          mini
         </Link>{' '}
         {new Date().getFullYear()}
         {'.'}
@@ -94,9 +94,18 @@ function Copyright(props) {
                 type="submit"
                 fullWidth
                 variant="contained"
-                sx={{ mt: 3, mb: 2 }}
+                sx={{ mt: 3.2, mb: -2 }}
               >
                 Sign In
+              </Button>
+
+              <Button  href="/auth/register"
+                type="submit"
+                fullWidth
+                variant="contained"
+                sx={{ mt: 3.2, mb: 2 }}
+              >
+                Sign Up
               </Button>
 
               <Grid container>
@@ -106,12 +115,9 @@ function Copyright(props) {
                   </Link>
                 </Grid>
                 <Grid item>
-                  <Link href="/auth/register" variant="body2">
-                    {"Don't have an account? Sign Up"}
-                  </Link>
                 </Grid>
               </Grid>
-              <Copyright sx={{ mt: 5 }} />
+              <Copyright sx={{ mt: 14 }} />
             </Box>
           </Box>
         </Grid>

@@ -18,9 +18,9 @@ import styles from '@/styles/Profile.module.css';
 function Copyright(props) {
     return (
         <Typography variant="body2" color="text.secondary" align="center" {...props}>
-            {'Copyright © '}
+            {' © '}
             <Link color="inherit" href="https://mui.com/">
-                Your Website
+                My progile
             </Link>{' '}
             {new Date().getFullYear()}
             {'.'}
@@ -98,7 +98,7 @@ export function Profile({loginUser}) {
                                 </a>
                             </div>
                             <p>
-                                <button>로그인 화면으로 가기</button>
+                                <button>contact</button>
                             </p>
                         </div>
                     </Box>

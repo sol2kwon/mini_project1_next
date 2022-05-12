@@ -134,7 +134,7 @@ export function Register({onChange, onSubmit}){
                 />
               </Grid>
             </Grid>
-            <Button
+            <Button 
               type="submit"
               fullWidth
               variant="contained"
